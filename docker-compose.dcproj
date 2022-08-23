@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>7ef99b78-0e2f-48db-a50c-56c37ed26300</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>webapisample</DockerServiceName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.elk.yml" />
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+    <None Include="elk\elasticsearch\config\elasticsearch.yml" />
+    <None Include="elk\elasticsearch\Dockerfile" />
+    <None Include="elk\img\elk\azure-nsg-inboundportsConfig.png" />
+    <None Include="elk\img\elk\bitnami_splash.png" />
+    <None Include="elk\img\elk\create-vm-elk-azure-last-step.png" />
+    <None Include="elk\img\elk\create-vm-elk-azure-summary.png" />
+    <None Include="elk\img\elk\create-vm-elk-azure.png" />
+    <None Include="elk\img\elk\discover-kibana.png" />
+    <None Include="elk\img\elk\kibana_eshops_index.png" />
+    <None Include="elk\img\elk\kibana_result.png" />
+    <None Include="elk\img\elk\kibana_startup.png" />
+    <None Include="elk\img\elk\kibana_working.png" />
+    <None Include="elk\kibana\config\kibana.yml" />
+    <None Include="elk\kibana\Dockerfile" />
+    <None Include="elk\logstash\config\logstash.yml" />
+    <None Include="elk\logstash\Dockerfile" />
+    <None Include="elk\logstash\pipeline\logstash.conf" />
+    <None Include="elk\Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="elk\**" />
+  </ItemGroup>
+</Project>

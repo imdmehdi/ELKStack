@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  webapisample:
+    image: ${DOCKER_REGISTRY-}webapisample
+    build:
+      context: .
+      dockerfile: WebApiSample/Dockerfile
+
+volumes:  
+ webapisample-data:  
+ logs: 

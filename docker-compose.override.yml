@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  webapisample:
+    container_name: webapisample
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ElasticConfiguration:Uri=http://elasticsearch:9200"
+    ports:
+      - "8005:80"
+    volumes:
+      - webapisample-data:/root/.microsoft/usersecrets:ro 
+      - logs:/app/BufferLogs/
